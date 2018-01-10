@@ -19,15 +19,16 @@ core = {
         } else {
             this.randomNum = newRandomNum;
             view.displayQuote(this.quotes[newRandomNum]);
+            view.tweetBtn(this.quotes[newRandomNum]);
         }
         
     },
 }
 
 controls = {
-    changeTweetText: function() {
+    /*changeTweetText: function() {
         var recipient = getElementById()
-    }
+    }*/
 
 }
 
@@ -35,10 +36,21 @@ view = {
     displayQuote: function(quote) {
         var recipient = document.getElementById("board");
         recipient.textContent = quote;
-    }
+    },
 
-    changeTweet: function() {
-        var twitter = document.getElementById("tweet").
+
+
+    tweetBtn: function(txt2tweet) {
+        var newBtn = document.createElement('a');
+        var container = document.getElementById('twtBtn');
+        newBtn.setAttribute('href', 'https://twitter.com/share');
+        newBtn.setAttribute('class', 'twitter-share-button');
+        newBtn.setAttribute('style', 'margin-top:5px;');
+        newBtn.setAttribute('data-text', txt2tweet);
+        newBtn.setAttribute('data-via', 'aadomix');
+        newBtn.setAttribute('data-size', 'large');
+        container.appendChild(newBtn);
+        twttr.widgets.load();
     }
 
 }
