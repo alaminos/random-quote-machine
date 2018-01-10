@@ -23,10 +23,6 @@ main {
     height: 70%;
 }
 
-.instructions {
-    background: beige;
-}
-
 #board {
     width: 50%;
     min-height: 80%;

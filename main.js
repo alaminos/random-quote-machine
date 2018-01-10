@@ -26,9 +26,11 @@ core = {
 }
 
 controls = {
-    /*changeTweetText: function() {
-        var recipient = getElementById()
-    }*/
+    removeOldTwttBtn: function() {
+        var frame = document.getElementById('twitter-widget-0');
+        frame.parentNode.removeChild('frame');
+
+    }
 
 }
 
@@ -36,16 +38,22 @@ view = {
     displayQuote: function(quote) {
         var recipient = document.getElementById("board");
         recipient.textContent = quote;
+        
     },
 
 
 
     tweetBtn: function(txt2tweet) {
+        var oldBtn = document.getElementById('twitter-widget-0');
+        if (oldBtn) {
+            controls.removeOldTwttBtn();
+        }
         var newBtn = document.createElement('a');
         var container = document.getElementById('twtBtn');
         newBtn.setAttribute('href', 'https://twitter.com/share');
         newBtn.setAttribute('class', 'twitter-share-button');
         newBtn.setAttribute('style', 'margin-top:5px;');
+        newBtn.setAttribute('id', 'temporaryBtn');
         newBtn.setAttribute('data-text', txt2tweet);
         newBtn.setAttribute('data-via', 'aadomix');
         newBtn.setAttribute('data-size', 'large');
