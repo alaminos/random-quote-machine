@@ -40,13 +40,15 @@ view = {
 
 
     tweetBtn: function(txt2tweet) {
-        
+
         var newBtn = document.createElement('a');
         var container = document.getElementById('twtBtn');
         var script = document.createElement('script');
 
+        container.innerHTML = "";
+
         script.setAttribute('src', "https://platform.twitter.com/widgets.js");
-        script.setAttribute('aync', true);
+        script.setAttribute('async', true);
         script.setAttribute('charset', 'utf-8');
 
         container.appendChild(script);
