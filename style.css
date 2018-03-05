@@ -38,9 +38,10 @@ header, footer {
 main {
     background: var(--bg-color);
     text-align: center;
-    height: 60%;
-    min-height: 500px;
-    margin-top: 8vh;
+    /*height: 60%;*/
+    min-height: 200px;
+    margin: 0 auto;
+    width: 99%;
 
     display: flex;
     flex-direction: column;
@@ -48,21 +49,19 @@ main {
 
 #board {
     flex: 1%;
-
-    width: 50%;
-    min-width: 250px;
+    
+    min-height: 16em;
+    width: 100%;
     margin: 0 auto;
-    border-radius: 10%;
-    padding: 1em;
-
+    border-radius: 5%;
+    
     color: rgb(223, 222, 233);
-    background: rgba(0, 0, 0, 0.74);
-
-    font-size: 40px;    
+    background: rgba(0, 0, 0, 0.74);    
 }
 
 #quote {
     font-size: var(--quote-size);
+    padding: 1em;
 }
 
 .buttons {
@@ -70,22 +69,42 @@ main {
     
     margin: 0 auto;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 2em;
     
+}
+
+@media (min-width: 600px) {
+    :root {
+        --quote-size: 2rem;
+        --header-size: 3rem;
+    }
+
+    main {
+        width: 600px;
+    }
+
 }
 
 
 
-@media (min-width: 700px ) {
+@media (min-width: 1200px ) {
+
+    :root {
+        --quote-size: 2.5vw;
+    }
+
     .buttons {
         width: 50%;
     }
 
-    :root {
-        --quote-size: 3.5rem;
-        --header-size: 3rem;
+    
+    #board {
+        min-height: 16em
     }
 
-
+    main {
+        width: 50vw;
+        max-width: 800px;
+    }
 
 }

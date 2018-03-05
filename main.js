@@ -4,8 +4,8 @@ core = {
         "La lâcheté rend subtil",
         "Je sens que je suis libre mais je sais que je ne le suis pas",
         "Se méfier des penseurs dont l'esprit ne fonctionne qu'à partir d'une citation",
-        "Un homme qui se respect n'a pas de patrie. La patrie c'est de la glu",
-        "Un opinion, oui. Une conviction, non. Tel est le point de la fierté intelectuel"
+        "Un homme qui se respecte n'a pas de patrie. La patrie c'est de la glu",
+        "Une opinion, oui. Une conviction, non. Tel est le point de la fierté intelectuelle"
     ],
 
     randomNum: 0,
