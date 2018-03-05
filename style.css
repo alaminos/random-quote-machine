@@ -1,7 +1,20 @@
-/*test comment*/
+
+:root {
+    /*---COLORS---*/
+    --txt-color: black;
+    --header-color: grey;
+    --bg-color: white;
+    
+    /*---FONT---*/
+    --quote-size: 1.5rem;
+    --header-size: 1.5rem;
+}
 
 body, html {
     padding: 0; margin: 0;
+}
+html {
+    font-size: 100%;
 }
 
 *{
@@ -11,34 +24,68 @@ body, html {
 
 body {
     height: 100vh;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
-header {
-    height: 20%;
-    font-size: x-large;
+header, footer {
+    font-size: var(--header-size);
     background: rgb(194, 190, 190);
 }
 
 main {
-    background-image: url(bkgd.jpg);
+    background: var(--bg-color);
     text-align: center;
-    height: 70%;
+    height: 60%;
+    min-height: 500px;
+    margin-top: 8vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 #board {
+    flex: 1%;
+
     width: 50%;
-    min-height: 80%;
+    min-width: 250px;
+    margin: 0 auto;
+    border-radius: 10%;
+    padding: 1em;
 
     color: rgb(223, 222, 233);
     background: rgba(0, 0, 0, 0.74);
 
-    font-size: 40px;
+    font-size: 40px;    
+}
 
-    margin: 0 auto;
+#quote {
+    font-size: var(--quote-size);
 }
 
 .buttons {
+    flex: 1;
+    
+    margin: 0 auto;
+    width: 100%;
     margin-top: 50px;
-
+    
 }
 
+
+
+@media (min-width: 700px ) {
+    .buttons {
+        width: 50%;
+    }
+
+    :root {
+        --quote-size: 3.5rem;
+        --header-size: 3rem;
+    }
+
+
+
+}

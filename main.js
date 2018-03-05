@@ -32,9 +32,8 @@ controls = {
 
 view = {
     displayQuote: function(quote) {
-        var recipient = document.getElementById("board");
-        recipient.textContent = quote;
-        
+        var quoteBox = document.getElementById("quote");
+        quoteBox.textContent = quote;
     },
 
 
