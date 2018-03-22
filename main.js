@@ -27,7 +27,6 @@ core = {
 
     quotePicker: function() {
         var newRandomNum = Math.floor(Math.random() * (this.quotes.length));
-        console.log(newRandomNum);
         if ( newRandomNum === this.randomNum ) {
             this.quotePicker();
         } else {
@@ -38,14 +37,13 @@ core = {
     },
 }
 
+
 //----------------------------------------------------------------
 view = {
     displayQuote: function(quote) {
         var quoteBox = document.getElementById("quote");
         quoteBox.textContent = quote;
     },
-
-
 
     tweetBtn: function(txt2tweet) {
 
@@ -72,11 +70,5 @@ view = {
         container.appendChild(newBtn);
         
         twttr.widgets.load();
-
-        /*<script 
-        async 
-        src="https://platform.twitter.com/widgets.js" 
-        charset="utf-8"></script>*/
     }
-
 }
