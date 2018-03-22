@@ -25,10 +25,9 @@ core = {
 
     randomNum: 0,
 
- 
-
     quotePicker: function() {
         var newRandomNum = Math.floor(Math.random() * (this.quotes.length));
+        console.log(newRandomNum);
         if ( newRandomNum === this.randomNum ) {
             this.quotePicker();
         } else {
@@ -36,15 +35,10 @@ core = {
             view.displayQuote(this.quotes[newRandomNum]);
             view.tweetBtn(this.quotes[newRandomNum]);
         }
-        
     },
 }
 
-controls = {
-    
-
-}
-
+//----------------------------------------------------------------
 view = {
     displayQuote: function(quote) {
         var quoteBox = document.getElementById("quote");
